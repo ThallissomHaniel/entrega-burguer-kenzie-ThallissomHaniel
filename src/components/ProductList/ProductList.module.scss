@@ -1,0 +1,142 @@
+.cardList {
+    width: 414px;
+    display: flex;
+    overflow-x: scroll;
+    gap: 20px;  
+    padding: 28px 0 0 16px;
+    margin-top: 76px;
+    margin-bottom: 30px;
+
+    .card {
+        display: flex;
+        width: 300px;
+        height: 346px;
+        flex-direction: column;
+        align-items: flex-start;
+        flex-shrink: 0;
+        border-radius: 5px;
+        border: 2px solid var(--grey-100);
+        background: #FFF;
+        overflow: hidden;
+        position: relative;
+
+        small {
+            display: flex;
+            width: 300px;
+            height: 150px;
+            flex-shrink: 0;
+            background-color: var(--grey-0);
+            justify-content: center;
+            align-items: center;
+            position: relative;
+
+            img {
+                position: absolute;
+                bottom: 0;
+            }
+        }
+
+        div {
+            display: flex;
+            flex-direction: column;
+            width: 300px;
+            height: 196px;
+            padding: 20px;
+            align-items: flex-start;
+            gap: 14px;
+            flex-shrink: 0;
+
+            h3 {
+                color: var(--grey-600);
+                font-family: Inter;
+                line-height: 24px;
+            }
+
+            .category {
+                color: var(--grey-300);
+                font-family: Inter;
+                font-size: 12px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 16px;
+            }
+
+            .price {
+                color: var(--Color-primary);
+                font-family: Inter;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 1.5rem;
+            }
+
+            button {
+                display: inline-flex;
+                height: 2.5rem;
+                padding: 0rem 1.25rem;
+                justify-content: center;
+                align-items: center;
+                gap: 0.625rem;
+                flex-shrink: 0;
+
+                border-radius: 0.5rem;
+                border: 2px solid var(--Gray-4, #BDBDBD);
+                background: var(--Gray-4, #BDBDBD);
+                color: #FFF;
+                position: absolute;
+                bottom: 20px;
+            }
+        }
+
+        &:hover {
+            border-radius: 8px;
+            border: 2px solid var(--Color-primary);
+
+            button {
+                background: var(--Color-primary);
+                border: 2px solid var(--Color-primary);
+            }
+        }
+    }
+}
+
+@media (min-width: 414px) {
+    .cardList {
+        width: 100%;
+    }
+}
+
+@media (min-width: 900px) {
+    .cardList {
+        overflow-x: hidden;
+        flex-wrap: wrap;
+        padding-left: 118px;
+        padding-right: 118px;
+        gap: 3.5rem;
+    }
+}
+
+@media (min-width: 1000px) {
+    .cardList {
+        padding-left: 118px + 50px;
+    }
+}
+
+@media (min-width: 1050px) {
+    .cardList {
+        padding-left: 118px + 70px;
+    }
+}
+
+@media (min-width: 1150px) {
+    .cardList {
+        padding-left: 118px + 120px;
+    }
+}
+
+@media (min-width: 1250px) {
+    .cardList {
+        padding-left: 118px;
+        padding-right: 118px;
+    }
+}
